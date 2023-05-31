@@ -3,62 +3,130 @@
   <head>
     <meta charset="UTF-8" name="keywords">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+      const url = "https://zeev-x.github.io/js/json/azey.json";
+      const height = "950";
+      const out = "image";
+      function home(){
+        window.location.reload(true);
+      }
+      function about(){
+        var about = document.getElementById("about");
+        about.style.display = "block";
+      }
+    </script>
+    <script src="https://zeev-x.github.io/js/parse.js"></script>
     <title>Your title</title>
   </head>
   <body>
-    <script>
-      const zcr = "https://zeev-x.github.io/js/json/azey.json";
-    </script>
-    <script src="https://zeev-x.github.io/js/style.js"></script>
-    <div id="style"></div>
-    <br><br><br><br><br>
-    <div class="header">
-      <h1>W E L C O M E</h1>
-      <h3>Halo selamat datang di website ini</h3>
-    </div>
-    <div class="content">
-      <h3>Random background</h3>
-      <p>Website ini adalah contoh penggunaan latar belakang acak pada sebuah website.Untuk mengganti background kamu bisa merefresh halaman ini.</p>
-    </div>
-    <div class="footer">
-      <i>Website ini di buat oleh <a href="https://github.com/zeev-x/">Zeev-x</a></i>
+    <nav>
+      <button class="logo" onclick="home()">zeev-x.io</button>
+      <ul>
+        <li><button class="active" onclick="home()">Home</button></li>
+        <li><button onclick="about()">About</button></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <div class="content">
+        <h3>Halo selamat datang</h3>
+        <p>Di sini saya akan memberikan sebuah gambar random : </p>
+        <div id="image"></div>
+        <br><br>
+      </div>
+      <div class="about" id="about">
+        <br><br><br>
+        <h3>1.About Zeev-x</h3>
+        <p><a href="https://github.com/Zeev-x/">Zeev-x</a> is a beginner website designer who still needs to learn a lot about designing websites, so if you want to provide input, I will really appreciate it and I'm very grateful for your input. You can find a repository that doesn't know what it's used for on <a href="https://github.com/Zeev-x/">Zeev-x's Github</a>.</p><br><br>
+        <h3>2.Tentang website ini</h3>
+      <p>Website ini hanya sebatas uji coba jadi isi di dalam website hanyalah sebatas deskripsi saja.Design ini bisa di dapatkan secara gratis jadi jikalau ada yang menjualnnya silahkan laporkan ke zeev.</p>
+      </div>
     </div>
     <style>
       body {
-        width: 75%;
-        margin: auto;
+        height: 95vh;
+        background-color: #2f2f2f;
+        padding: 0px;
+        margin: 0px;
+      }
+      .logo {
         font-family: Monospace;
-      }
-      .header {
-        text-align: center;
-      }
-      .header h1 {
-        font-family: Courier;
-        font-size: 300%;
+        color: #000000;
+        font-size: 40px;
+        font-weight: bold;
         background-color: black;
+        padding: 5px 20px;
+        border-radius: 40px;
         color: white;
-        padding: 20px;
-        margin: auto;
       }
-      .header h3 {
-        font-family: Courier;
-        font-size: 90%;
-        background-color: aqua;
-        color: black;
-        padding: 5px;
-        margin: auto;
+      ul {
+        list-style: none;
+      }
+      button {
+        text-decoration: none;
+      }
+      button.logo {
+        color: #e60000;
+        border: #a20000 2px solid;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+        background-color: #002050;
+        box-shadow: 3px 3px 16px #ff0707;
+        padding: 0px 5%;
+      }
+      nav ul {
+        display: flex;
+      }
+      nav ul li button {
+        margin: 30px;
+        font-family: mirad pro regular;
+        color: #505050;
+        font-size: 20px;
+        font-weight: 700;
+        border: none;
+        background-color: transparent;
+        color: #580000;
+      }
+      .active {
+        color: #a00000;
+        font-weight: bold;
+      }
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: top;
+        padding-left: 2%;
       }
       .content {
-        padding: 25px;
+        padding-right: 3%;
+        padding-left: 3%;
+        text-align: left;
         color: white;
-        background-color: #00000051;
-      }
-      .footer {
-        text-align: center;
+        width: 100%;
         margin: auto;
-        padding: 5px;
-        background-color: aqua;
-        font-size: 60%;
+      }
+      .about {
+        display: none;
+        background-color: #002050;
+        padding: 0px;
+        color: white;
+        padding-right: 5%;
+        padding-top: 3%;
+        padding-bottom: 5%;
+        padding-left: 2%;
+        text-align: left;
+        width: 30%;
+        box-shadow: 3px 3px 16px #ff0707;
+        align-items: bottom;
+      }
+      .about a {
+        color: red;
+      }
+      #image {
+        text-align: center;
       }
     </style>
   </body>
