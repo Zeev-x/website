@@ -3,141 +3,112 @@
   <head>
     <meta charset="UTF-8" name="keywords">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="https://zeev-x.github.io/js/json/index.js"></script>
-    <script>
-      function home(){
-        var about = document.getElementById("about");
-        var btn_home = document.getElementById("btn_home");
-        var btn_about = document.getElementById("btn_about");
-        about.style.display = "none";
-        btn_about.style.color = "black";
-        btn_home.style.color = "red";
-      }
-      function about(){
-        var about = document.getElementById("about");
-        var btn_home= document.getElementById("btn_home");
-        var btn_about = document.getElementById("btn_about");
-        about.style.display = "block";
-        btn_about.style.color = "red";
-        btn_home.style.color = "black";
-      }
-      
-      window.onload = azey(),ecchi(),yor(),miku(),nino();
-    </script>
-    <title>Your title</title>
+    <title>anime wallpaper hd</title>
   </head>
   <body>
     <nav>
-      <button class="logo" onclick="home()">zeev-x.io</button>
+      <button class="logo" onclick="home()">Anime Wallpaper HD</button>
       <ul>
         <li><button id="btn_home" onclick="home()">Home</button></li>
         <li><button id="btn_about" onclick="about()">About</button></li>
       </ul>
     </nav>
-    <div class="container">
-      <div class="content">
-        <h3>Halo selamat datang</h3>
-        <p>Di sini saya akan menampilkan beberapa gambar : </p>
+    <div class="content">
+      <div id="cont_home">
+        <h3>Selamat datang di Anime Wallpaper HD</h3>
+        <p>Di sini saya akan membagikan beberapa gambar anime yang cocok untuk wallpaper hp kamu dan tentunya dengan kualitas HD.Berikut gambar yang bisa kamu unduh :</p>
         <div id="result"></div>
-        <br><br>
       </div>
-      <div class="about" id="about">
-        <br><br><br>
+      <div id="cont_about">
         <h3>1.About Zeev-x</h3>
-        <p><a href="https://github.com/Zeev-x/">Zeev-x</a> is a beginner website designer who still needs to learn a lot about designing websites, so if you want to provide input, I will really appreciate it and I'm very grateful for your input. You can find a repository that doesn't know what it's used for on <a href="https://github.com/Zeev-x/">Zeev-x's Github</a>.</p><br><br>
-        <h3>2.Tentang website ini</h3>
-      <p>Website ini hanya sebatas uji coba jadi isi di dalam website hanyalah sebatas deskripsi saja.Design ini bisa di dapatkan secara gratis jadi jikalau ada yang menjualnnya silahkan laporkan ke zeev.</p>
+        <p><a class="clr" href="https://github.com/Zeev-x/">Zeev-x</a> is a beginner website designer who still needs to learn a lot about designing websites, so if you want to provide input, I will really appreciate it and I'm very grateful for your input. You can find a repository that doesn't know what it's used for on <a class="clr" href="https://github.com/Zeev-x/">Zeev-x's Github</a>.</p>
       </div>
     </div>
     <style>
       body {
-        height: 95vh;
-        background-color: #2f2f2f;
-        padding: 0px;
-        margin: 0px;
+        background-color: #ffffff;
+        padding: 20px;
+        margin: auto;
+        width: 75%;
       }
       .logo {
         font-family: Monospace;
         color: #000000;
-        font-size: 40px;
+        font-size: 30px;
         font-weight: bold;
-        background-color: black;
-        padding: 5px 20px;
-        border-radius: 40px;
-        color: white;
       }
       ul {
         list-style: none;
       }
       button {
         text-decoration: none;
-      }
-      button.logo {
-        color: #e60000;
-        border: #a20000 2px solid;
+        border: none;
+        background-color: transparent;
       }
       nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 100px;
-        background-color: #002050;
-        box-shadow: 3px 3px 16px #ff0707;
+        height: 60px;
+        background-clip: #ffffff;
+        box-shadow: 6px 6px 32px black;
         padding: 0px 5%;
+        background-color: white;
       }
       nav ul {
         display: flex;
       }
       nav ul li button {
         margin: 30px;
-        font-family: mirad pro regular;
+        font-family: Courier;
         color: #505050;
-        font-size: 20px;
+        font-size: 15px;
         font-weight: 700;
-        border: none;
-        background-color: transparent;
-        color: #580000;
-      }
-      .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: top;
-        padding-left: 2%;
       }
       .content {
-        padding-right: 3%;
-        padding-left: 3%;
-        text-align: left;
-        color: white;
-        width: 100%;
         margin: auto;
-      }
-      .about {
-        display: none;
-        background-color: #002050;
-        padding: 0px;
+        background-color: #00000064;
+        padding: 25px;
         color: white;
-        padding-right: 5%;
-        padding-top: 3%;
-        padding-bottom: 5%;
-        padding-left: 2%;
-        text-align: left;
-        width: 30%;
-        box-shadow: 3px 3px 16px #ff0707;
-        align-items: bottom;
       }
-      .about a {
+      .content a {
+        text-decoration: none;
         color: red;
+      }
+      .content a:hover {
+        color: aqua;
       }
       #result {
         text-align: center;
       }
-      #btn_home {
-        color: red;
-      }
-      #btn_about {
-        color: black;
-      }
     </style>
+    <script src="https://zeev-x.github.io/js/json/index.js"></script>
+    <script>
+       const zcr = "https://zeev-x.github.io/js/json/azey.json";
+      function home(){
+        var btn_home = document.getElementById("btn_home");
+        var btn_about = document.getElementById("btn_about");
+        var cont_home = document.getElementById("cont_home");
+        var cont_about = document.getElementById("cont_about");
+        btn_home.style.color = "red";
+        btn_about.style.color = "black";
+        cont_home.style.display = "block";
+        cont_about.style.display = "none";
+      }
+      function about(){
+        var btn_home = document.getElementById("btn_home");
+        var btn_about = document.getElementById("btn_about");
+        var cont_home = document.getElementById("cont_home");
+        var cont_about = document.getElementById("cont_about");
+        btn_home.style.color = "black";
+        btn_about.style.color = "red";
+        cont_home.style.display = "none";
+        cont_about.style.display = "block";
+      }
+      
+      window.onload = home(),stars(),azey();
+    </script>
+    <script src="https://zeev-x.github.io/js/style.js"></script>
+    <div id="style"></div>
   </body>
 </html>
