@@ -3,34 +3,42 @@
   <head>
     <meta charset="UTF-8" name="keywords">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://zeev-x.github.io/js/json/index.js"></script>
     <script>
-      const url = "https://zeev-x.github.io/js/json/azey.json";
-      const height = "700";
-      const out = "image";
       function home(){
-        window.location.reload(true);
+        var about = document.getElementById("about");
+        var btn_home = document.getElementById("btn_home");
+        var btn_about = document.getElementById("btn_about");
+        about.style.display = "none";
+        btn_about.style.color = "black";
+        btn_home.style.color = "red";
       }
       function about(){
         var about = document.getElementById("about");
+        var btn_home= document.getElementById("btn_home");
+        var btn_about = document.getElementById("btn_about");
         about.style.display = "block";
+        btn_about.style.color = "red";
+        btn_home.style.color = "black";
       }
+      
+      window.onload = azey(),ecchi(),yor(),miku(),nino();
     </script>
-    <script src="https://zeev-x.github.io/js/parse.js"></script>
     <title>Your title</title>
   </head>
   <body>
     <nav>
       <button class="logo" onclick="home()">zeev-x.io</button>
       <ul>
-        <li><button class="active" onclick="home()">Home</button></li>
-        <li><button onclick="about()">About</button></li>
+        <li><button id="btn_home" onclick="home()">Home</button></li>
+        <li><button id="btn_about" onclick="about()">About</button></li>
       </ul>
     </nav>
     <div class="container">
       <div class="content">
         <h3>Halo selamat datang</h3>
-        <p>Di sini saya akan memberikan sebuah gambar random : </p>
-        <div id="image"></div>
+        <p>Di sini saya akan menampilkan beberapa gambar : </p>
+        <div id="result"></div>
         <br><br>
       </div>
       <div class="about" id="about">
@@ -90,10 +98,6 @@
         background-color: transparent;
         color: #580000;
       }
-      .active {
-        color: #a00000;
-        font-weight: bold;
-      }
       .container {
         display: flex;
         justify-content: space-between;
@@ -125,8 +129,14 @@
       .about a {
         color: red;
       }
-      #image {
+      #result {
         text-align: center;
+      }
+      #btn_home {
+        color: red;
+      }
+      #btn_about {
+        color: black;
       }
     </style>
   </body>
