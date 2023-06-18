@@ -7,7 +7,7 @@
   </head>
   <body>
     <nav>
-      <button class="logo" onclick="home()">Anime HD</button>
+      <button class="logo" onclick="mp3()">Anime HD</button>
       <ul>
         <li><button id="btn_home" onclick="home()">Home</button></li>
         <li><button id="btn_about" onclick="about()">About</button></li>
@@ -27,9 +27,9 @@
     <style>
       body {
         background-color: #ffffff;
-        padding: 20px;
+        padding: 70px;
         margin: auto;
-        width: 85%;
+        width: 95%;
       }
       .logo {
         font-family: Monospace;
@@ -81,10 +81,21 @@
       #result {
         text-align: center;
       }
+      #result img {
+        height: 200px;
+        border-radius: 15px;
+        padding: 2px;
+      }
     </style>
     <script src="https://zeev-x.github.io/js/json/index.js"></script>
     <script>
-       const zcr = "https://zeev-x.github.io/js/json/azey.json";
+      const zcr = "https://zeev-x.github.io/js/json/azey.json";
+      
+      function mp3(){
+        var audio = `<audio controls autoplay><source="https://zeev-x.github.io/anime.img/audio.mp3"></audio>`;
+        document.getElementById("audio").innerHTML = audio;
+      }
+      
       function home(){
         var btn_home = document.getElementById("btn_home");
         var btn_about = document.getElementById("btn_about");
@@ -106,9 +117,10 @@
         cont_about.style.display = "block";
       }
       
-      window.onload = home(),stars(),azey();
+      window.onload = home(),azey(),stars();
     </script>
     <script src="https://zeev-x.github.io/js/style.js"></script>
     <div id="style"></div>
+    <div id="audio"></div>
   </body>
 </html>
