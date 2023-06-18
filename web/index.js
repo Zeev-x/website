@@ -8,7 +8,7 @@ function zeev(){
 }
 
 function mp3(){
-  var audio = document.getElementById("audio");
+  var audio = document.getElementById("mp3");
   var btn_wel = document.getElementById("logo");
   if(audio.paused){
     audio.play();
@@ -18,6 +18,17 @@ function mp3(){
     btn_wel.style.color = "black";
   }
 }
+
+var time = 2
+      var count = setInterval(function(){
+        time--
+        document.getElementById("count").innerHTML = time;
+        if(time == 0){
+          clearInterval(count);
+          var web = `<audio autoplay loop><source src="audio.mp3"></audio>`;
+          document.getElementById("audio").innerHTML = web;
+        }
+      },1000);
 
 function home(){ 
   page_home.style.display = "block";
