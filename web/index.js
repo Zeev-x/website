@@ -31,4 +31,4 @@ function about(){
   btn_about.style.color = "red";
   btn_home.style.color = "black";
 }
-window.onload = home(),stars(),mp3();
+window.onload = home(),stars();
