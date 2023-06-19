@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src='/assets/logo.svg' className="App-logo" alt="logo" />
+        <img src='./assets/logo.svg' className="App-logo" alt="logo" />
         <p>
           Welcome <strong>User</strong>
         </p>
